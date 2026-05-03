@@ -14,7 +14,7 @@ function IndexPage() {
   return (
     <div className="flex w-full flex-col items-center justify-center p-6">
       <div className="p-10">
-        <h1 className="text-4xl mb-4">Encore.ts Streaming Chat Example</h1>
+        <h1 className="text-4xl mb-4">Best Streaming Chat Example</h1>
         <p className="text-center mb-1">
           Simple chat application showcasing how to use Encore.ts{" "}
           <a

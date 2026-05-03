@@ -57,7 +57,7 @@ function Layout() {
     <div>
       <header>
         <nav className="flex items-center justify-between bg-black text-white p-4">
-          <Link to="/">Home</Link>
+          <Link to="/">Sweet Home</Link>
         </nav>
       </header>
 

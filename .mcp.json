@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "encore-mcp": {
+      "command": "encore",
+      "args": [
+        "mcp",
+        "run",
+        "--app=real-time-chat-app-xbzi"
+      ]
+    },
+    "encore-local": {
+      "type": "stdio",
+      "command": "encore",
+      "args": [
+        "mcp",
+        "run",
+        "--app=real-time-chat-app-xbzi"
+      ],
+      "env": {}
+    }
+  }
+}
