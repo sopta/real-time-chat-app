@@ -68,8 +68,22 @@ export namespace chat {
     msg: string;
   }
 
+  export interface PresenceUser {
+    id: string;
+    username: string;
+  }
+
+  export interface ServerEvent {
+    type: "chat" | "presence";
+    userID?: string;
+    username?: string;
+    msg?: string;
+    users?: PresenceUser[];
+  }
+
   export interface HandshakeRequest {
     id: string;
+    username: string;
   }
 
   export interface PostMessage {
@@ -86,10 +100,11 @@ export namespace chat {
 
     public async chat(
       params: HandshakeRequest,
-    ): Promise<StreamInOut<PostMessage, ChatMessage>> {
+    ): Promise<StreamInOut<PostMessage, ServerEvent>> {
       // Convert our params into the objects we need for the request
       const query = makeRecord<string, string | string[]>({
         id: params.id,
+        username: params.username,
       });
 
       return await this.baseClient.createStreamInOut(`/chat`, { query });
